@@ -395,3 +395,197 @@ p {
     border-radius: 8px;
     overflow: hidden;
 }
+
+/* =========================
+   RESPONSIVE MOBILE
+   ========================= */
+
+@media (max-width: 768px) {
+
+  body {
+    font-size: 15px;
+  }
+
+  .header {
+    padding: 20px 18px 0;
+  }
+
+  .logo-img {
+    width: 95px;
+  }
+
+  .site-title {
+    font-size: 30px;
+    margin-bottom: 28px;
+  }
+
+  .nav {
+    gap: 10px 18px;
+    margin-bottom: 50px;
+    flex-wrap: wrap;
+  }
+
+  .nav a {
+    font-size: 12px;
+  }
+
+  .container {
+    width: 100%;
+    padding: 0 22px 60px;
+  }
+
+  h1 {
+    font-size: 38px;
+    margin-bottom: 35px;
+  }
+
+  h2 {
+    font-size: 22px;
+  }
+
+  p {
+    font-size: 15px;
+    line-height: 1.75;
+  }
+
+  .intro {
+    max-width: 100%;
+    margin-bottom: 38px;
+  }
+
+  .large-img,
+  .large-img1 {
+    height: 230px;
+    margin-bottom: 50px;
+  }
+
+  .columns-2,
+  .columns-3,
+  .testimonials,
+  .price-layout,
+  .contact-top,
+  .contact-bottom,
+  .gallery,
+  .home-about-grid,
+  .home-services,
+  .home-gallery-grid,
+  .home-testimonial-grid {
+    grid-template-columns: 1fr;
+    gap: 35px;
+  }
+
+  .gallery img {
+    height: 280px;
+  }
+
+  .home-hero {
+    margin-top: -20px;
+    margin-bottom: 45px;
+  }
+
+  .home-hero img {
+    height: 230px;
+  }
+
+  .home-about,
+  .home-gallery,
+  .home-testimonial {
+    padding: 55px 0;
+  }
+
+  .home-about-images {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+  }
+
+  .home-small-img,
+  .home-tall-img {
+    width: 100%;
+    height: 240px;
+  }
+
+  .home-services {
+    padding: 55px 22px;
+  }
+
+  .home-gallery-grid {
+    gap: 18px;
+  }
+
+  .gallery-large,
+  .gallery-column img {
+    height: 230px;
+  }
+
+  .home-gallery-link {
+    text-align: left;
+  }
+
+  .home-testimonial-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .home-testimonial-grid img {
+    height: 230px;
+  }
+
+  .price-title {
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .contact-top {
+    margin: 40px 0 55px;
+  }
+
+  .divider {
+    margin-bottom: 45px;
+  }
+
+  .map {
+    height: 300px;
+  }
+}
+
+@media (max-width: 420px) {
+
+  .site-title {
+    font-size: 26px;
+  }
+
+  .logo-img {
+    width: 85px;
+  }
+
+  h1 {
+    font-size: 34px;
+  }
+
+  .nav {
+    gap: 8px 14px;
+  }
+
+  .nav a {
+    font-size: 11px;
+  }
+
+  .large-img,
+  .large-img1,
+  .home-hero img,
+  .gallery img,
+  .gallery-large,
+  .gallery-column img,
+  .home-testimonial-grid img {
+    height: 210px;
+  }
+
+  .home-about-images {
+    grid-template-columns: 1fr;
+  }
+
+  .home-small-img,
+  .home-tall-img {
+    height: 230px;
+  }
+}
