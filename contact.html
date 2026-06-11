@@ -6,7 +6,16 @@
   <meta name="description" content="Contacte con Brillo y Celebracion para solicitar información sobre decoración y organización de eventos.">
   <title>Contacto | Brillo y Celebracion</title>
   <link rel="stylesheet" href="css/style.css">
+  <link
+  rel="stylesheet"
+  href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+/>
+
+<script
+  src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js">
+</script>
 </head>
+
 <body>
 
 <header class="header">
@@ -41,7 +50,7 @@
   <hr class="divider">
 
   <section class="contact-bottom">
-    <img src="assets/carte.png" class="map" alt="Mapa de ubicación de Brillo y Celebracion">
+    <div id="map" class="map"></div>
 
     <div>
       <h2>¿Necesita ponerse en contacto con nosotros?</h2>
@@ -51,6 +60,36 @@
     </div>
   </section>
 </main>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
 
+    const map = L.map('map', {
+        scrollWheelZoom: false
+    }).setView([43.3382, -1.7893], 14);
+
+    L.tileLayer(
+        'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
+        {
+            attribution: '&copy; OpenStreetMap contributors'
+        }
+    ).addTo(map);
+
+    L.marker([43.3382, -1.7893])
+        .addTo(map)
+        .bindPopup('<strong>Irun</strong><br>Gipuzkoa, España')
+        .openPopup();
+
+    map.getContainer().addEventListener('wheel', function(e) {
+
+        if (e.ctrlKey) {
+            map.scrollWheelZoom.enable();
+        } else {
+            map.scrollWheelZoom.disable();
+        }
+
+    });
+
+});
+</script>
 </body>
 </html>
